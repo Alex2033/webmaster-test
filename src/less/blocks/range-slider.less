@@ -1,0 +1,114 @@
+.range-slider {
+    width: 100%;
+
+    &__items {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 12px;
+    }
+
+    &__item {
+        max-width: 180px;
+        font-size: 13px;
+        line-height: 1.46;
+        color: @dark;
+        font-family: @main-font-light;
+
+        &:first-child {
+            margin-right: 55px;
+        }
+
+        .md-block({
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        });
+
+        .sm-block({
+            text-align: center;
+        });
+    }
+
+    &__progress {
+        position: relative;
+
+        #gradient-progress {
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 48.6%;
+        }
+
+        #notFill-progress {
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    &__range {
+        margin-bottom: 30px;
+        width: 100%;
+        display: block;
+        appearance: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 33px;
+            margin-top: 20px;
+            transform: translateX(1px);
+            border: 0;
+            background: url('../../img/icons/range-item.svg');
+            cursor: pointer;
+        }
+            
+        &::-moz-range-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 33px;
+            transform: translate(1px, 25px);
+            top: 20px;
+            border: 0;
+            background: url('../../img/icons/range-item.svg');
+            cursor: pointer;
+        }
+
+        &::-ms-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 33px;
+            margin-top: 0px;
+            margin-left: -5px;
+            border: 0;
+            background: url('../../img/icons/range-item.svg');
+            cursor: pointer;
+        }
+
+        &::-ms-fill-lower {
+            display: none;
+        }
+
+        &::-ms-fill-upper {
+            display: none;
+        }
+
+        &::-ms-track {
+            height: 50px;
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+        }
+    }
+}

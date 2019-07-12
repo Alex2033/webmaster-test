@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- begin wrapper-->
+    <div class="wrapper">
+      <!-- begin header -->
+      <header class="header">
+        <div class="header__container container">
+          <!-- begin toggle -->
+          <div class="toggle">
+            <div class="toggle__sandwich">
+              <div class="toggle__sandwich-line top"></div>
+              <div class="toggle__sandwich-line middle"></div>
+              <div class="toggle__sandwich-line bottom"></div>
+            </div>
+            <div class="toggle__text">Меню</div>
+          </div>
+          <!-- end toggle -->
+          <!-- begin navigation -->
+          <nav class="navigation header__nav">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a class="navigation__link" href="/">Личная информация</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="/">Опыт</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="/">JavaScript</a></li>
+              <li class="navigation__item"><a class="navigation__link" href="/">О себе</a></li>
+            </ul>
+          </nav>
+          <!-- end navigation -->
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- begin main-content-->
+      <main class="main-content">
+        <!-- begin about -->
+        <section class="about">
+          <div class="container about__container">
+            <h1 class="title">Анкета</h1>
+            <div class="about__body"><img class="icon" src="img/icons/personal.svg" alt="personal">
+              <h2 class="section-title">Личная информация</h2>
+              <!-- begin inputs -->
+              <div class="inputs">
+                <input class="input" type="text" name="name" placeholder="ФИО" value="Хохлов Александр Юрьевич">
+                <!-- begin select -->
+                <div class="select"><img class="select__icon" src="img/icons/arrow.svg" alt="arrow"></div>
+                <!-- end select -->
+                <input class="input" type="text" name="city" placeholder="Место проживания" value="Спб">
+                <input class="input" type="text" name="skype" placeholder="Skype" value="Xronaliz">
+                <input class="input" type="text" name="e-mail" placeholder="E-mail" value="XoxlofAlexandr@yandex.ru">
+              </div>
+              <!-- end inputs --><img class="icon" src="img/icons/exp.svg" alt="experience">
+              <h2 class="section-title">Расскажите о своем опыте</h2>
+              <!-- begin checkboxes -->
+              <div class="checkboxes">
+                <label class="checkboxes__container">БЭМ/OOCSS
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">Stylus/LESS/SASS
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">Работаю с SVG
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">Верстаю семантично
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">ES2015/ES2016
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">Gulp/GRUNT
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">Webpack
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">jQuery
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+                <label class="checkboxes__container">Ипользую Git
+                  <input type="checkbox" checked="checked"><span class="checkboxes__checkmark"></span>
+                </label>
+              </div>
+              <!-- end checkboxes -->
+            </div>
+          </div>
+        </section>
+        <!-- end about -->
+        <!-- begin js-level -->
+        <section class="js-level">
+          <div class="container js-level__container">
+            <div class="js-level__content"><img class="icon" src="img/icons/JS.svg" alt="JavaScript">
+              <h2 class="section-title js-level__title">Уровень владения JavaScript</h2>
+              <!-- begin range-slider -->
+              <div class="range-slider">
+                <div class="range-slider__items">
+                  <div class="range-slider__item">Не владею</div>
+                  <div class="range-slider__item">
+                     Использую готовые <br>решения</div>
+                  <div class="range-slider__item">Использую готовые решения и умею и переделывать</div>
+                  <div class="range-slider__item">Пишу сложный JS с нуля</div>
+                </div>
+                <div class="range-slider__progress">
+                  <input class="range-slider__range" type="range" min="1" max="100" value="49">
+                  <svg id="notFill-progress" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="15px">
+                    <path fill-rule="evenodd" opacity="0.102" fill="rgb(28, 28, 28)" d="M-0.000,14.855 L-0.000,11.857 L769.670,0.863 L769.670,14.855 L-0.000,14.855 Z"></path>
+                  </svg>
+                  <svg id="gradient-progress" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="770px" height="14px">
+                    <defs>
+                      <lineargradient id="PSgrad_0" x1="0%" x2="100%" y1="0%" y2="0%">
+                        <stop offset="0%" stop-color="rgb(204,177,241)" stop-opacity="1"></stop>
+                        <stop offset="100%" stop-color="rgb(67,89,147)" stop-opacity="1"></stop>
+                      </lineargradient>
+                    </defs>
+                    <path fill-rule="evenodd" fill="rgb(28, 28, 28)" d="M-0.000,14.012 L-0.000,11.007 L770.014,-0.012 L770.014,14.012 L-0.000,14.012 Z"></path>
+                    <path fill="url(#PSgrad_0)" d="M-0.000,14.012 L-0.000,11.007 L770.014,-0.012 L770.014,14.012 L-0.000,14.012 Z"></path>
+                  </svg>
+                </div>
+              </div>
+              <!-- end range-slider -->
+            </div>
+          </div>
+        </section>
+        <!-- end js-level -->
+        <!-- begin yourself-info -->
+        <section class="yourself-info">
+          <div class="container yourself-info__container">
+            <div class="yourself-info__content"><img class="icon" src="img/icons/about.svg" alt="about">
+              <h2 class="section-title yourself-info__title">Расскажите о себе</h2>
+              <div class="section-title__subheading-text">
+                <p>Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
+              </div>
+              <textarea class="yourself-info__textarea" placeholder="Понравилась тем, что...">Вакансия привлекла возможностью работы в веб-студии с большим опытом разработок. Для меня важен профессиональный рост и ожидаю этого от данной работы.</textarea>
+              <button class="button">Готово</button>
+            </div>
+          </div>
+        </section>
+        <!-- end yourself-info -->
+      </main>
+      <!-- end main-content-->
+    </div>
+    <!-- end wrapper-->
+    <!-- begin footer -->
+    <footer class="footer"></footer>
+    <!-- end footer -->
+    <!-- scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

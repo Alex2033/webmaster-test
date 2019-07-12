@@ -1,0 +1,25 @@
+.button {
+	font-family: @main-font-light;
+	color: #ffffff;
+	display: inline-block;
+	text-align: center;
+	min-width: 116px;
+	cursor: pointer;
+	padding: 14px 19px;
+	border: 0;
+	background-color: @accent;
+	border-radius: 10px;
+	transition: background-color .1s ease, transform .1s ease;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		background-color: lighten(@accent, 5%);
+	}
+
+	&:active {
+		transform: translateY(2px);
+	}
+}

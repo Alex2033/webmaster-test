@@ -1,0 +1,103 @@
+// begin main-content
+main.main-content
+    // begin about 
+    section.about
+        .container.about__container
+            h1.title Анкета
+            .about__body
+                img.icon(src="img/icons/personal.svg", alt="personal")
+                h2.section-title Личная информация
+                // begin inputs 
+                .inputs
+                    input.input(type="text" name="name" placeholder="ФИО" value="Хохлов Александр Юрьевич")
+                    // begin select 
+                    .select
+                        img(src="img/icons/arrow.svg" alt="arrow").select__icon
+                    // end select 
+                    input.input(type="text" name="city" placeholder="Место проживания" value="Спб")
+                    input.input(type="text" name="skype" placeholder="Skype" value="Xronaliz")
+                    input.input(type="text" name="e-mail" placeholder="E-mail" value="XoxlofAlexandr@yandex.ru")
+                // end inputs 
+                img.icon(src="img/icons/exp.svg", alt="experience")
+                h2.section-title Расскажите о своем опыте
+                // begin checkboxes 
+                .checkboxes
+                    label.checkboxes__container БЭМ/OOCSS
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container Stylus/LESS/SASS
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container Работаю с SVG
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container Верстаю семантично
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container ES2015/ES2016
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container Gulp/GRUNT
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container Webpack
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container jQuery
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                    label.checkboxes__container Ипользую Git
+                        input(type="checkbox" checked="checked")
+                        span.checkboxes__checkmark
+                // end checkboxes 
+
+    // end about 
+
+    // begin js-level 
+    section.js-level
+        .container.js-level__container
+            .js-level__content
+                img.icon(src="img/icons/JS.svg", alt="JavaScript")
+                h2.section-title.js-level__title Уровень владения JavaScript
+
+                // begin range-slider 
+                .range-slider
+                    .range-slider__items
+                        .range-slider__item Не владею
+                        .range-slider__item 
+                            | Использую готовые 
+                            br 
+                            | решения
+                        .range-slider__item Использую готовые решения и умею и переделывать
+                        .range-slider__item Пишу сложный JS с нуля
+                    .range-slider__progress
+                        input(type="range" min="1" max="100" value="49").range-slider__range
+                        svg#notFill-progress(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%' height='15px')
+                            path(fill-rule='evenodd' opacity='0.102' fill='rgb(28, 28, 28)' d='M-0.000,14.855 L-0.000,11.857 L769.670,0.863 L769.670,14.855 L-0.000,14.855 Z')
+                        svg#gradient-progress(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='770px' height='14px')
+                            defs
+                                lineargradient#PSgrad_0(x1='0%' x2='100%' y1='0%' y2='0%')
+                                    stop(offset='0%' stop-color='rgb(204,177,241)' stop-opacity='1')
+                                    stop(offset='100%' stop-color='rgb(67,89,147)' stop-opacity='1')
+                            path(fill-rule='evenodd' fill='rgb(28, 28, 28)' d='M-0.000,14.012 L-0.000,11.007 L770.014,-0.012 L770.014,14.012 L-0.000,14.012 Z')
+                            path(fill='url(#PSgrad_0)' d='M-0.000,14.012 L-0.000,11.007 L770.014,-0.012 L770.014,14.012 L-0.000,14.012 Z')
+
+
+                // end range-slider 
+
+    // end js-level 
+
+    // begin yourself-info 
+    section.yourself-info
+        .container.yourself-info__container
+            .yourself-info__content
+                img.icon(src="img/icons/about.svg", alt="about")
+                h2.section-title.yourself-info__title Расскажите о себе
+                .section-title__subheading-text
+                    p.
+                        Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+                textarea.yourself-info__textarea(placeholder="Понравилась тем, что...") Вакансия привлекла возможностью работы в веб-студии с большим опытом разработок. Для меня важен профессиональный рост и ожидаю этого от данной работы.
+                button.button Готово
+    // end yourself-info 
+
+// end main-content

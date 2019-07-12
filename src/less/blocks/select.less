@@ -1,0 +1,142 @@
+// .select {
+//   position: relative;
+//   cursor: pointer;
+//   margin-bottom: 24px;
+
+//   select {
+//     width: 320px;
+//     border: 1px solid @light;
+//     padding: 11px;
+//     text-align: center;
+//     appearance: none;
+//     cursor: pointer; 
+//     background-color: transparent;
+//   }
+
+//   &__icon {
+//     z-index: -1;
+//     position: absolute;
+//     width: 13px;
+//     top: 10px;
+//     right: 20px;
+//     transform-origin: center;
+//     transform: rotate(180deg);
+//   }
+// }
+
+.select {
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 320px;
+
+  .select__input {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    font-size: 24px;
+    padding: @gutter;
+    background-color: white;
+    border: 1px solid @light;
+    padding: 11px;
+    border-radius: 5px;
+    user-select: none;
+
+    .sm-block({
+        font-size: 16px;
+    });
+  }
+
+  &__icon {
+    position: absolute;
+    width: 13px;
+    top: 27px;
+    right: 18px;
+    transform-origin: center;
+    transform: rotate(180deg);
+
+    .sm-block({
+        top: 22px;
+    });
+
+    &.active {
+      transform: rotate(0);
+    }
+  }
+}
+
+
+.select__input:hover {
+  cursor: pointer;
+}
+
+.placeholder {
+  color: @input-c;
+}
+
+.input__selected {
+  color: @colorPrimaryDark;
+}
+
+/* Dropdown styling */
+
+.structure {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 301px;
+  width: 100%;
+  max-width: 320px;
+  font-size: 20px;
+  overflow-y: auto;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  padding: 25px 0;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    width: 4px;
+    border-radius: 5px;
+  }
+
+}
+
+.structure>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  font-size: 13px;
+  font-family: @main-font-light;
+  color: @accent;
+}
+
+.structure>div:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.structure>div>h5 {
+  font-size: 20px;
+
+  .sm-block({
+    font-size: 16px;
+  });
+}
+
+.structure>div>p {
+  font-size: 13px;
+  color: @colorPlaceholder;
+}
+
+.hide {
+  display: none;
+}
